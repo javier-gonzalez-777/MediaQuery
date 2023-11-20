@@ -1,0 +1,222 @@
+body {
+    background-color:white;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    
+  }
+  
+  footer {
+    background-color:rgb(20, 20, 188);
+    grid-area: footer;
+    color: white;
+  }
+  .info{
+    margin-top: 10px;
+    /*border: 1px solid red;*/
+    align-items: center;
+    text-align: center;
+  }
+  
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color:rgb(231, 227, 227);
+    grid-area: aside;
+   /* border: 5px solid yellow; */
+  }
+  .selector{
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid blueviolet;*/
+    /*justify-content: center; */
+    text-align: center; 
+    align-items: center; 
+
+  }
+  
+  
+  .iconos1{
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid red;*/
+    /*margin-left: 70%; */
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .iconos2{
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid red;*/
+    
+    align-items: center;
+  }
+  
+ 
+ 
+  
+  .card img{
+    height: 20em;
+   }
+  
+  .paginacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .boton-num{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+  }
+  
+  @media (max-width: 576px){
+    .grid-container {   /* celular */
+      display: grid;
+      height: 100vh;
+      width: 100vw;
+      grid-template-columns: 1fr;
+      grid-template-rows: 4em 6em 1fr 5em;
+      grid-template-areas: "nav" "aside" "main" "footer";
+    
+    }
+    main {
+      height: 100vh;
+      overflow-y:scroll;
+      padding: 1em;
+     /* background-color: chocolate; */
+      /*border: 3px solid green; */
+      grid-area: main;
+      
+    }
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color:rgb(68, 68, 219);
+      color: white;
+      grid-area: nav;
+      /*border: 1px solid blue;*/
+      justify-content:space-between; 
+      padding: 1em;
+    }
+    .texto-menu {
+      display: none;
+    }
+    #pet-select{
+      width: 200px;
+    }
+    .card{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+      border: 1px solid ;
+    }
+    button{
+      background-color: blue;
+      color: white;
+      border-radius: 1em ;
+    }
+    .card img{
+      width: 200px;
+      height: 200px;
+  
+    }
+  }
+  
+  @media (min-width: 577px) { /* escritorio */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 12em 1fr;
+      grid-template-areas: "nav aside" "nav main" "footer main";
+      background-color: white;
+      
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color:rgb(45, 45, 222);
+      color: white;
+      grid-area: nav;
+      /*border: 1px solid blue;*/
+      /*justify-content:center;*/
+      padding: 1em;
+    }
+    .iconos2 {
+      display: none;
+    }
+    #pet-select{
+      width: 700px;
+      
+    }
+    .grid{
+    display: grid;
+    display: flex;
+    flex-wrap:wrap;
+    /*grid-template-columns: repeat(auto, minmax(180px, 1fr)); */
+    gap: 1em;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid ;
+  }
+  button{
+    background-color: blue;
+    color: white;
+    border-radius: 1em ;
+  }
+  .card img{
+    width: 200px;
+    height: 200px;
+
+  }
+  }
+
+  /* @media (min-width: 576px) { /* tablet */
+  /*  .grid-container {
+      grid-template-columns: 4em 1fr;
+      grid-template-rows: 4em 1fr 4em;
+      grid-template-areas: "nav nav" "aside main" "footer footer";
+      background-color: blue;
+    }
+  }
+  */
+  
+ /* @media (prefers-color-scheme: dark) {
+    body {
+      background-color: black;
+      color: white;
+    }
+  
+    footer {
+      background-color: black;
+    }
+  
+    aside {
+      background-color: blueviolet;
+    }
+  
+    nav {
+      background-color: darkslategray;
+    }
+  
+    main {
+      background-color: red;
+    }
+  } */
